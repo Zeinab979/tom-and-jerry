@@ -48,7 +48,8 @@ fun TomAccountScreen() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(8.dp)
-                    .background(MaterialTheme.colorScheme.background)
+                    .background(
+                        MaterialTheme.colorScheme.background)
             ) {
                 Text(
                     "v.TomBeta",
@@ -67,7 +68,8 @@ fun TomAccountScreen() {
                 .padding(top = 190.dp)
                 .background(
                     MaterialTheme.colorScheme.background,
-                    RoundedCornerShape(topStart = 16.dp , topEnd = 16.dp)
+                    RoundedCornerShape(
+                        topStart = 16.dp , topEnd = 16.dp)
                 )
                 .padding(start = 16.dp , end = 16.dp)
         ) {
@@ -155,8 +157,8 @@ fun ImageSection(
         }
     }
 }
-
 @Preview(showBackground = true)
+@Preview(showBackground = true,uiMode = android.content.res.Configuration.UI_MODE_NIGHT_YES,)
 @Preview(showBackground = true,
     device = "spec:id=reference_tablet,shape=Normal,width=1280,height=800,unit=dp,dpi=240"
 )

@@ -3,7 +3,6 @@ package com.example.tomandjerry.presentation.store.components
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -51,7 +50,8 @@ fun CheesesCard(cheeseCount : Int, modifier: Modifier = Modifier){
     }
 }
 
-@Preview
+@Preview(uiMode = android.content.res.Configuration.UI_MODE_NIGHT_YES)
+@Preview(uiMode = android.content.res.Configuration.UI_MODE_NIGHT_NO)
 @Composable
 private fun CheesesCardPreview() {
     TomAndJerryTheme {

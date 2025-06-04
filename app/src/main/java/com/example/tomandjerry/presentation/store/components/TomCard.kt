@@ -19,7 +19,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -41,7 +40,7 @@ fun TomCard(item: TomItem) {
             modifier = Modifier
                 .padding(top = 16.dp)
                 .background(
-                    Color.White,
+                    color = MaterialTheme.colorScheme.surface,
                     shape = RoundedCornerShape(16.dp)
                 )
                 .height(219.dp),
@@ -56,6 +55,7 @@ fun TomCard(item: TomItem) {
                 overflow = TextOverflow.Ellipsis,
                 maxLines = 1,
                 textAlign = TextAlign.Center,
+                color = MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier.fillMaxWidth()
 
             )
@@ -64,6 +64,7 @@ fun TomCard(item: TomItem) {
                 fontSize = 12.sp,
                 textAlign = TextAlign.Center,
                 overflow = TextOverflow.Ellipsis,
+                color = MaterialTheme.colorScheme.onSurface,
                 maxLines = 3,
             )
             Spacer(modifier = Modifier.height(6.dp))
@@ -105,7 +106,8 @@ fun TomCard(item: TomItem) {
     }
 }
 
-@Preview
+@Preview(uiMode = android.content.res.Configuration.UI_MODE_NIGHT_YES)
+@Preview(uiMode = android.content.res.Configuration.UI_MODE_NIGHT_NO)
 @Composable
 private fun TomCardPreview() {
     TomAndJerryTheme {

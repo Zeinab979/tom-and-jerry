@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -55,13 +54,13 @@ fun StateCard(state: TomState, modifier: Modifier = Modifier) {
         Column {
             Text(
                 text = state.value,
-                color = MaterialTheme.colorScheme.onSurface,
+                color = Color(0xAD121212),
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = state.label,
-                color = MaterialTheme.colorScheme.onSurface,
-                fontSize = 12.sp
+                color = Color(0xAD121212),
+                fontSize = 12.sp,
             )
         }
     }

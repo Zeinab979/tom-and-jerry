@@ -87,7 +87,8 @@ fun JerryStore(tomList: List<TomItem>) {
                 Text(
                     stringResource(R.string.hi_jerry),
                     fontWeight = FontWeight.Bold,
-                    fontSize = 14.sp
+                    fontSize = 14.sp,
+                    color = MaterialTheme.colorScheme.onSurface
                 )
                 Text(
                     stringResource(R.string.which_tom_do_you_want_to_buy),
@@ -110,6 +111,7 @@ fun JerryStore(tomList: List<TomItem>) {
                 },
                 content = {
                     Icon(
+                        tint = MaterialTheme.colorScheme.onSecondary,
                         painter = painterResource(id = R.drawable.notification),
                         contentDescription = "notification",
                         modifier = Modifier
@@ -241,7 +243,8 @@ fun JerryStore(tomList: List<TomItem>) {
             Text(
                 "Cheap tom section",
                 fontWeight = FontWeight(600),
-                fontSize = 20.sp
+                fontSize = 20.sp,
+                color = MaterialTheme.colorScheme.onSurface
             )
             Spacer(modifier = Modifier.weight(1f))
             Text(
